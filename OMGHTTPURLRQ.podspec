@@ -1,9 +1,8 @@
 Pod::Spec.new do |s|
   s.name = "OMGHTTPURLRQ"
 
-  `xcodebuild -project #{s.name}.xcodeproj -showBuildSettings` =~ /CURRENT_PROJECT_VERSION = "1.1"
-  abort("No version detected") if $1.nil?
-  s.version = $1
+  `xcodebuild -project #{s.name}.xcodeproj -showBuildSettings` =~ /CURRENT_PROJECT_VERSION = "1.1"/
+  s.version = "1.1"
   
   s.homepage = "https://github.com/mxcl/#{s.name}"
   s.source = { :git => "https://github.com/mxcl/#{s.name}.git", :tag => s.version }
